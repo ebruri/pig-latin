@@ -1,4 +1,3 @@
-//Business logic
 function pigLatin(text) {
   textArray = text.split("");
   const vowels = ['a','e','i','o','u'];
@@ -20,7 +19,6 @@ function pigLatin(text) {
   };
 };
 
-//UI logic
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
