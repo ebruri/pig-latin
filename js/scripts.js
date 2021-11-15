@@ -1,13 +1,11 @@
-//business logic
+//Business logic
 function pigLatin(text) {
   textArray = text.split("");
   const vowels = ['a','e','i','o','u'];
   let vowelIndex = 0;
   if (vowels.includes(textArray[0])) {
-    //if first letter is vowel
     newArray = textArray.join("");
     return newArray + 'way';
-    //if the first two letter are "qu"
   } else if (textArray[0] === "q" || textArray[1] === "u") {
     textArray.splice(textArray.length, 1, textArray[0]);
     textArray.splice(textArray.length, 1, textArray[1]);
@@ -15,14 +13,12 @@ function pigLatin(text) {
     newArray = textArray.join("");
     return newArray + "ay";
   } else {
-    //if first letter is not vowel
     textArray.splice(textArray.length, 1, textArray[0]);
     textArray.splice(0, 1);
     newArray = textArray.join("");
     return newArray + "ay";
   };
 };
-
 
 //UI logic
 $(document).ready(function() {
